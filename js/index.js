@@ -16,7 +16,7 @@ allDay.forEach((d, number) =>
 	i = 1;
 	dayNumber.textContent = nowDate.getDate();
 	d.dataset.timestamp = timestamp;
-	timestamp += 216000;
+	timestamp += 86400;
 	if (dayOfWeek.textContent === 'Сб' || dayOfWeek.textContent === 'Вс')
 	{
 		d.classList.add('page-nav__day_weekend');

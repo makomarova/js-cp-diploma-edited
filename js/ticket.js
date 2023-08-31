@@ -12,7 +12,7 @@ document.querySelector(".ticket__hall").textContent = window.localStorage.getIte
 document.querySelector(".ticket__start").textContent = window.localStorage.getItem('seanceTime');
 
 let date = new Date();
-date.setDate(date.getDate() + Number(window.localStorage.getItem('timestemp')) / 216000);
+date.setDate(date.getDate() + Number(window.localStorage.getItem('timestemp')) / 86400);
 
 let dateStr = date.toLocaleDateString("ru-RU",
 {
