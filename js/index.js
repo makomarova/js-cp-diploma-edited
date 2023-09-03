@@ -1,7 +1,8 @@
-let timestamp = 0;
-window.localStorage.setItem('currentTimestemp', 0);
 let days = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 let nowDate = new Date();
+nowDate.setHours(0, 0, 0);
+let timestamp = Math.trunc( (new Date(nowDate.getTime()))/1000);
+window.localStorage.setItem('currentTimestemp', timestamp);
 let dayOfWeek = days[nowDate.getDay()];
 const daysOfWeek = document.querySelectorAll('.page-nav__day-week');
 const allDay = document.querySelectorAll('.page-nav__day');
